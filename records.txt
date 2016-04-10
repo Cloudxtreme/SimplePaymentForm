@@ -1,0 +1,3 @@
+Total No. of Apples: 0
+Total No. of Oranges: 0
+Total No. of Bananas: 0

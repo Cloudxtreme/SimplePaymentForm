@@ -1,0 +1,98 @@
+<!----------------------------
+| Name: Suyash Lakhotia      |
+| Matric No. U1423096J       |
+| Lab Group: TS1             |
+------------------------------>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Suyash Lakhotia">
+
+    <!-- Title -->
+    <title>Payment Form</title>
+
+    <!-- Input Validation JavaScript -->
+    <script type="text/javascript" src="validate.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Stylesheet -->
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Jumbotron -->
+    <div class="container">
+        <div class="jumbotron">
+            <h2>Payment Form</h2>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <!-- Payment Form -->
+                <form id="paymentForm" method="post" action="process.php" onSubmit="return (validName() && validNum() && validPay());">
+                    <!-- Name -->
+                    <div class="form-group">
+                        <label class="control-label">Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Please enter your name" />
+                    </div>
+
+                    <!-- No. of Apples -->
+                    <div class="form-group">
+                        <label class="control-label">Apples (69&cent; each):</label>
+                        <input class="form-control" type="text" id="apples" name="apples" value="0" onchange="validNum();" />
+                    </div>
+
+                    <!-- No. of Oranges -->
+                    <div class="form-group">
+                        <label class="control-label">Oranges (59&cent; each):</label>
+                        <input class="form-control" type="text" id="oranges" name="oranges" value="0" onchange="validNum();" />
+                    </div>
+
+                    <!-- No. of Bananas -->
+                    <div class="form-group">
+                        <label class="control-label">Bananas (39&cent; each):</label>
+                        <input class="form-control" type="text" id="bananas" name="bananas" value="0" onchange="validNum();" />
+                    </div>
+
+                    <!-- Payment Method -->
+                    <div class="form-group">
+                        <label class="control-label">Payment Method:&nbsp;&nbsp;</label>
+                        <input type="radio" name="payment" id="visa" value="Visa" checked /> Visa&nbsp;&nbsp;
+                        <input type="radio" name="payment" id="mastercard" value="MasterCard"> MasterCard&nbsp;&nbsp;
+                        <input type="radio" name="payment" id="discover" value="Discover" /> Discover
+                    </div>
+
+                    <!-- Total Cost -->
+                    <div class="form-group">
+                        <label class="control-label">Total Cost ($):</label>
+                        <input class="form-control" type="text" id="totalCost" name="totalCost" readonly />
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="btn-row">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button type="submit" name="Submit" class="btn btn-success">Submit</button>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="reset" class="btn btn-danger">Clear</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
