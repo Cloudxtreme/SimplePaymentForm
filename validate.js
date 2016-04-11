@@ -26,25 +26,25 @@ function validNum() {
     var bananasValue = document.getElementById('bananas').value;
     var flag = false;
 
-    // Check if the entered value blank, null or not a number.
+    // Check if the entered value is blank, null or not a number.
     if (isNaN(applesValue) || applesValue == "" || applesValue == null) {
         flag = "apples";
         alertUser(flag);
     }
 
-    // Check if the entered value blank, null or not a number.
+    // Check if the entered value is blank, null or not a number.
     if (isNaN(orangesValue) || orangesValue == "" || orangesValue == null) {
         flag = "oranges";
         alertUser(flag);
     }
 
-    // Check if the entered value blank, null or not a number.
+    // Check if the entered value is blank, null or not a number.
     if (isNaN(bananasValue) || bananasValue == "" || bananasValue == null) {
         flag = "bananas";
         alertUser(flag);
     }
 
-    // Check if any of the three fields were invalid.
+    // Check if any of the three fields are invalid.
     if (flag) {
         return false;
     } else {
